@@ -10,7 +10,7 @@ public class Cond01 {
 
         if (idade>=18) {
             System.out.println("Maior de Idade.");
-        }else { 
+        }else {
             System.out.println("Menor de Idade.");
         }
         sc.close();

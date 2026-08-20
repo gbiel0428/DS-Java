@@ -14,19 +14,27 @@ public class atvCond6 {
         String op = sc.next();
         
         if (op.equals("+")) {
-            double soma = (nota1 + nota2);
-            System.out.printf("A soma é: %.2f",soma);
+
+        double soma = (nota1 + nota2);
+        System.out.printf("A soma é: %.2f",soma);
+
         }else if (op.equals("-")){
-            double sub = (nota1 - nota2);
-            System.out.printf("A Subtração é: %.2f ",sub);
+
+        double sub = (nota1 - nota2);
+        System.out.printf("A Subtração é: %.2f ",sub);
+
         }else if (op.equals("/")){
-            double div = (nota1 / nota2);
-            System.out.printf("A Divisão é: %.2f",div);
+
+        double div = (nota1 / nota2);
+        System.out.printf("A Divisão é: %.2f",div);
+
         }else if (op.equals("*")){
-            double mul=(nota1 * nota2);
-            System.out.printf("A multiplicação é: %.2f",mul);
+
+        double mul=(nota1 * nota2);
+        System.out.printf("A multiplicação é: %.2f",mul);
+
         }else{
-            System.out.println("Opereção Incorreta.");
+        System.out.println("Opereção Incorreta.");
         }
 
         sc.close();

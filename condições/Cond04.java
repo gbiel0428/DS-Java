@@ -13,7 +13,7 @@ public class Cond04 {
             System.out.println("Adolescente.");
         }else if(idade<60){
             System.out.println("Adulto.");
-        }else {
+        }else if (idade>=70 ) {
             System.out.println("Idoso.");
         }
         
