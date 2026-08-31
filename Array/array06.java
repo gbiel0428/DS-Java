@@ -10,14 +10,14 @@ public class array06 {
 
         System.out.println("Quantas pessoas deseja cadastrar: ");
         int quantidade = sc.nextInt();
-        sc.nextLine(); 
+        sc.nextLine();
 
         nomes = new String[quantidade];
         idades = new int[quantidade];
 
         for (int i = 0; i < quantidade; i++) {
             System.out.printf("Informe o Nome: ");
-            nomes[i] = sc.nextLine(); 
+            nomes[i] = sc.nextLine();
             
             System.out.printf("Informe a Idade: ");
             idades[i] = sc.nextInt();
