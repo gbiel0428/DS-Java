@@ -1,7 +1,7 @@
 public class Conta {
     private int numero;
     private String titular;
-    protected double saldo; // 'protected' permite que ContaCorrente altere o saldo
+    protected double saldo;
     private Agencia agencia;
 
     public Conta(int numero, String titular, double saldo, Agencia agencia) {
@@ -26,6 +26,7 @@ public class Conta {
     }
 
     public void mostrarDados() {
+        System.out.println("\n=======DADOS DA CONTA========");
         agencia.mostrarDados();
         System.out.println("Número da conta: " + numero);
         System.out.println("Titular: " + titular);

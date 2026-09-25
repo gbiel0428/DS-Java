@@ -2,27 +2,27 @@ import java.util.Scanner;
 
 public class Principal {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
         System.out.println("CADASTRO INICIAL");
         System.out.print("Número da agência: ");
-        int numAgencia = scanner.nextInt();
-        scanner.nextLine(); // Limpar buffer
+        int numAgencia = sc.nextInt();
+        sc.nextLine();
 
         System.out.print("Nome da agência: ");
-        String nomeAgencia = scanner.nextLine();
+        String nomeAgencia = sc.nextLine();
 
         Agencia agencia = new Agencia(numAgencia, nomeAgencia);
 
         System.out.print("Número da conta: ");
-        int numConta = scanner.nextInt();
-        scanner.nextLine(); // Limpar buffer
+        int numConta = sc.nextInt();
+        sc.nextLine();
 
         System.out.print("Titular: ");
-        String titular = scanner.nextLine();
+        String titular = sc.nextLine();
 
         System.out.print("Saldo inicial: R$ ");
-        double saldoInicial = scanner.nextDouble();
+        double saldoInicial = sc.nextDouble();
 
         ContaCorrente cc = new ContaCorrente(numConta, titular, saldoInicial, agencia);
 
@@ -38,7 +38,7 @@ public class Principal {
             System.out.println("7 - Transferir (Desafio)");
             System.out.println("0 - Sair");
             System.out.print("Escolha uma opção: ");
-            opcao = scanner.nextInt();
+            opcao = sc.nextInt();
 
             switch (opcao) {
                 case 1:
@@ -49,34 +49,34 @@ public class Principal {
                     break;
                 case 3:
                     System.out.print("Valor do depósito: R$ ");
-                    double valorDep = scanner.nextDouble();
+                    double valorDep = sc.nextDouble();
                     cc.depositar(valorDep);
                     break;
                 case 4:
                     System.out.print("Valor do pagamento via PIX: R$ ");
-                    double valorPix = scanner.nextDouble();
-                    scanner.nextLine(); // Limpar buffer
+                    double valorPix = sc.nextDouble();
+                    sc.nextLine();
                     System.out.print("Chave PIX: ");
-                    String chavePix = scanner.nextLine();
+                    String chavePix = sc.nextLine();
                     cc.pagar(valorPix, chavePix);
                     break;
                 case 5:
                     System.out.print("Valor da compra no cartão: R$ ");
-                    double valorCartao = scanner.nextDouble();
+                    double valorCartao = sc.nextDouble();
                     System.out.print("Quantidade de parcelas: ");
-                    int parcelas = scanner.nextInt();
+                    int parcelas = sc.nextInt();
                     cc.pagar(valorCartao, parcelas);
                     break;
                 case 6:
                     System.out.print("Valor do pagamento em dinheiro: R$ ");
-                    double valorDinheiro = scanner.nextDouble();
+                    double valorDinheiro = sc.nextDouble();
                     cc.pagar(valorDinheiro);
                     break;
                 case 7:
                     System.out.print("Número da conta de destino: ");
-                    int contaDestino = scanner.nextInt();
+                    int contaDestino = sc.nextInt();
                     System.out.print("Valor da transferência: R$ ");
-                    double valorTransf = scanner.nextDouble();
+                    double valorTransf = sc.nextDouble();
                     cc.transferir(contaDestino, valorTransf);
                     break;
                 case 0:
@@ -86,6 +86,7 @@ public class Principal {
                     System.out.println("Opção inválida!");
             }
         }
-        scanner.close();
+        sc.close();
     }
 }
+

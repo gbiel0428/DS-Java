@@ -4,7 +4,7 @@ public class ContaCorrente extends Conta implements Pagamento {
         super(numero, titular, saldo, agencia);
     }
 
-    // 1. Pagamento em Dinheiro (Implementa a interface Pagamento)
+    
     @Override
     public void pagar(double valor) {
         if (valor <= 0) {
@@ -20,7 +20,7 @@ public class ContaCorrente extends Conta implements Pagamento {
         }
     }
 
-    // 2. Pagamento via PIX (Sobrecarga)
+
     public void pagar(double valor, String chavePix) {
         if (valor <= 0) {
             System.out.println("Valor inválido para pagamento.");
@@ -35,7 +35,6 @@ public class ContaCorrente extends Conta implements Pagamento {
         }
     }
 
-    // 3. Pagamento no Cartão (Sobrecarga)
     public void pagar(double valor, int parcelas) {
         if (valor <= 0) {
             System.out.println("Valor inválido para pagamento.");
@@ -56,7 +55,6 @@ public class ContaCorrente extends Conta implements Pagamento {
         }
     }
 
-    // Desafio: Transferência
     public void transferir(int contaDestino, double valor) {
         if (valor <= 0) {
             System.out.println("Valor inválido para transferência.");
